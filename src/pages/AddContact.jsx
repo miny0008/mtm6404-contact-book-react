@@ -10,7 +10,7 @@ export default function AddContact() {
     const navigate = useNavigate();
   
     const handleSubmit = async (formData) => {
-        console.log('Sending to Firestore:', formData); // 👈 add this line
+        console.log('Sending to Firestore:', formData); 
         try {
           const docRef = await addDoc(collection(db, 'Contacts'), formData);
           navigate(`/contact/${docRef.id}`);
